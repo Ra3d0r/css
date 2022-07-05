@@ -1,0 +1,16 @@
+a {
+    /* Reset value */
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    /* Liniear gradient */
+    background: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%) no-repeat;
+    background-size: 0% 2px;
+    background-position: left bottom; /* Позиция начала аниманции */
+    /* Animation */
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background-size: 100% 2px;
+}
