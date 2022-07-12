@@ -7,3 +7,12 @@ This repository is mini practice and templates for CSS:
 
 
 2. Animation background gradient.
+
+![Анимация градиента на фоне](gif/2.gif)
+
+
+3. Animation background bubbles.
+
+
+![Анимация пузырьков на фоне](gif/3.gif)
+

@@ -1,3 +1,11 @@
+:root {
+    --background-color: #0c192c;
+    --bubbles: #4fc3cd;
+    --bubbles2: #ff2d75;
+    --shadow: #4fc3dc44;
+    --shadow2: #ff2d7544;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,10 +14,43 @@
 
 body {
     min-height: 100vh;
-    background: #0c192c;
+    background: var(--background-color);
 }
 
 .container {
     position: relative;
-    
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: var(--bubbles);
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px var(--shadow), 0 0 50px var(--bubbles), 0 0 100px var(--bubbles);
+    animation: animate calc(100s / var(--i)) linear infinite;
+
+}
+
+.bubbles span:nth-child(even) {
+    background-color: var(--bubbles2);
+    box-shadow: 0 0 0 10px var(--shadow2), 0 0 50px var(--bubbles2), 0 0 100px var(--bubbles2);
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0)
+    }
+    100% {
+        transform: translateY(-10vh) scale(1)
+    }
 }
